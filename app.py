@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_ngrok import run_with_ngrok
 import pandas
 import tensorflow as tf
 import numpy as np
@@ -13,7 +12,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 #model_name='classify.h5'
-model=tf.keras.models.load_model('Flask-app/Rolex/classify.h5') 
+model=tf.keras.models.load_model('classify.h5') 
 def model_predict(imgPath,model):
     test_image1 = image.load_img(imgPath, target_size = (64, 64))
     test_image1 = image.img_to_array(test_image1)
